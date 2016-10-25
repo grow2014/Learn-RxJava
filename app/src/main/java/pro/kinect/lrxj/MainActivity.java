@@ -1,13 +1,16 @@
 package pro.kinect.lrxj;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -89,18 +92,45 @@ public class MainActivity extends AppCompatActivity implements TextView.OnEditor
                 });
             }
         }).map(t -> t.length() > 6);
-        passwordValid.map(b -> b ? Color.BLACK : Color.RED)
-                .subscribe(c -> etPassword.setTextColor(c));
+        passwordValid
+                .map(b -> b ? Color.BLACK : Color.RED)
+                .subscribe(c -> etPassword.setTextColor(c))
+        ;
     }
 
 
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btnSend:
-                showMessage(getString(R.string.button_pressed));
+                boolean isOk = false;
+                if (!EMAIL_ADDRESS.matcher(etEmail.getText()).matches()) {
+                    etEmail.setError(getString(R.string.write_your_email));
+                } else {
+                    isOk = true;
+                }
+
+                if ((TextUtils.isEmpty(etPassword.getText()))
+                        || !(etPassword.getText().length() > 6)) {
+                    etPassword.setError(getString(R.string.lenght_password));
+                    isOk = false;
+                }
+
+                if (isOk) {
+                    showMessage(getString(R.string.email_and_password_were_verified));
+                }
+                closeKeyboard();
                 break;
             default:
                 break;
+        }
+    }
+
+    private void closeKeyboard() {
+        View view = this.getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm =
+                    (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }
     }
 

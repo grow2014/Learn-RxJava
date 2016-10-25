@@ -3,6 +3,8 @@
     <string name="send">Send</string>
     <string name="login">Login</string>
     <string name="password">Password</string>
-    <string name="button_pressed">Button is pressed</string>
+    <string name="email_and_password_were_verified">Email and password were verified</string>
     <string name="email">Email</string>
+    <string name="write_your_email">Write your email</string>
+    <string name="lenght_password">Length of password must be more to 6 letters</string>
 </resources>
