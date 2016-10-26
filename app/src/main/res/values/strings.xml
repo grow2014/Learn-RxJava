@@ -7,8 +7,9 @@
     <string name="email">Email</string>
     <string name="write_your_email">Write your email</string>
     <string name="lenght_password">Length of password must be more to 6 letters</string>
-    <string name="next">Next</string>
+    <string name="stop">Stop</string>
     <string name="skip">Skip</string>
+    <string name="start">Start</string>
     <array name="backgrounds">
         <item>https://pp.vk.me/c626125/v626125195/32a50/pOJwyxxOTkM.jpg</item>
         <item>https://pp.vk.me/c626125/v626125195/32a5a/Qgk3SI_tigw.jpg</item>
