@@ -1,6 +1,7 @@
 package pro.kinect.lrxj;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -101,7 +102,7 @@ public class MainActivity extends AppCompatActivity implements TextView.OnEditor
 
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.btnSend:
+            case R.id.btnValidate: {
                 boolean isOk = false;
                 if (!EMAIL_ADDRESS.matcher(etEmail.getText()).matches()) {
                     etEmail.setError(getString(R.string.write_your_email));
@@ -117,8 +118,13 @@ public class MainActivity extends AppCompatActivity implements TextView.OnEditor
 
                 if (isOk) {
                     showMessage(getString(R.string.email_and_password_were_verified));
+                    startActivity(new Intent(this, BackgroundActivity.class));
                 }
                 closeKeyboard();
+                break;
+            }
+            case R.id.btnSkip :
+                startActivity(new Intent(this, BackgroundActivity.class));
                 break;
             default:
                 break;
@@ -141,7 +147,7 @@ public class MainActivity extends AppCompatActivity implements TextView.OnEditor
     @Override
     public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
         if (EditorInfo.IME_ACTION_DONE == actionId) {
-            onClick(findViewById(R.id.btnSend));
+            onClick(findViewById(R.id.btnValidate));
         }
         return false;
     }

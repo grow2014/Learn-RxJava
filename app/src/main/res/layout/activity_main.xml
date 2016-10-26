@@ -22,10 +22,10 @@
             android:id="@+id/etEmail"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="@string/email"
             android:layout_weight="1"
-            android:inputType="textEmailAddress"
+            android:hint="@string/email"
             android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
             />
 
         <EditText
@@ -34,19 +34,33 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="@string/password"
-            android:inputType="textPassword"
             android:imeOptions="actionDone"
+            android:inputType="textPassword"
             />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btnSend"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/llEditText"
-        android:text="@string/send"
-        android:layout_centerHorizontal="true"
-        android:onClick="onClick"
-        />
-
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        >
+        <Button
+            android:id="@+id/btnValidate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:onClick="onClick"
+            android:text="@string/validate"
+            />
+        <Button
+            android:id="@+id/btnSkip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:onClick="onClick"
+            android:text="@string/skip"
+            />
+    </LinearLayout>
 </RelativeLayout>

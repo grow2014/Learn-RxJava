@@ -1,10 +1,29 @@
 <resources>
     <string name="app_name">Learn RxJava</string>
-    <string name="send">Send</string>
+    <string name="validate">Validate</string>
     <string name="login">Login</string>
     <string name="password">Password</string>
     <string name="email_and_password_were_verified">Email and password were verified</string>
     <string name="email">Email</string>
     <string name="write_your_email">Write your email</string>
     <string name="lenght_password">Length of password must be more to 6 letters</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <array name="backgrounds">
+        <item>https://pp.vk.me/c626125/v626125195/32a50/pOJwyxxOTkM.jpg</item>
+        <item>https://pp.vk.me/c626125/v626125195/32a5a/Qgk3SI_tigw.jpg</item>
+        <item>https://pp.vk.me/c626125/v626125195/32a64/qTyyrlsH4Pc.jpg</item>
+        <item>https://pp.vk.me/c626125/v626125195/32a6e/riwrYbPRKvs.jpg</item>
+        <item>https://pp.vk.me/c626125/v626125195/32a78/MwcEwlS4n38.jpg</item>
+        <item>https://pp.vk.me/c626125/v626125195/32a82/GXnaPw9Cd0M.jpg</item>
+        <item>https://pp.vk.me/c626125/v626125195/32a8c/M04kf5OBjgI.jpg</item>
+        <item>https://pp.vk.me/c626125/v626125195/32a96/d0gA09nbzKo.jpg</item>
+        <item>https://pp.vk.me/c626125/v626125195/32aa0/L2uzEJShkgQ.jpg</item>
+        <item>https://pp.vk.me/c626125/v626125195/32aaa/y7m_Wk0eLZU.jpg</item>
+        <item>https://pp.vk.me/c626125/v626125195/32ab4/KceuMsySHBo.jpg</item>
+        <item>https://pp.vk.me/c626125/v626125195/32abe/1SGqxqJGIrk.jpg</item>
+        <item>https://pp.vk.me/c626125/v626125195/32ac8/EB_hbSAJHgo.jpg</item>
+        <item>https://pp.vk.me/c626125/v626125195/32ad2/ZoQzL9BaYcU.jpg</item>
+        <item>https://pp.vk.me/c626125/v626125195/32adc/SHy-olqyzF0.jpg</item>
+    </array>
 </resources>
